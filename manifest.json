@@ -1,0 +1,33 @@
+{
+	"manifest_version": 2,
+	"name": "tweet classifier",
+	"description": "text analysts",
+	"version": "0.0.2",
+	"icons": { "128": "icon_128.png" },
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/img16.png",
+            "32": "images/img32.png",
+            "48": "images/img48.png",
+            "128": "images/img128.png"
+        }
+    },
+    "icons": {
+        "16": "images/img16.png",
+        "32": "images/img32.png",
+        "48": "images/img48.png",
+        "128": "images/img128.png"
+    },
+	"background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+	 "content_scripts": [
+	   {
+		 "matches": ["https://twitter.com/*"],
+		 "js": ["jquery-3.3.1.js" ,"jquery.cookie.min.js","contentScript.js"]
+	   }
+	 ],
+	"permissions": ["activeTab","storage","declarativeContent","https://mohamadakkad.pythonanywhere.com/,https://cdn.iconscout.com/","webNavigation","tabs"]
+}

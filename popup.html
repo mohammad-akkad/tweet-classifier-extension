@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <style>
+	/* The switch - the box around the slider */
+	.switch {
+	  position: relative;
+	  display: inline-block;
+	  width: 60px;
+	  height: 34px;
+	      float: right;
+	}
+    .row {
+	    margin-bottom: 20%;
+	    height: 20px;
+	}
+	body {
+	    padding: 8px;
+	    width:250px;
+	    background-color: lightgray;
+	}
+	/* Hide default HTML checkbox */
+	.switch input {
+	  opacity: 0;
+	  width: 0;
+	  height: 0;
+	}
+
+	/* The slider */
+	.slider {
+	  position: absolute;
+	  cursor: pointer;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: #ccc;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	.slider:before {
+	  position: absolute;
+	  content: "";
+	  height: 26px;
+	  width: 26px;
+	  left: 4px;
+	  bottom: 4px;
+	  background-color: white;
+	  -webkit-transition: .4s;
+	  transition: .4s;
+	}
+
+	input:checked + .slider {
+	  background-color: #2196F3;
+	}
+
+	input:focus + .slider {
+	  box-shadow: 0 0 1px #2196F3;
+	}
+
+	input:checked + .slider:before {
+	  -webkit-transform: translateX(26px);
+	  -ms-transform: translateX(26px);
+	  transform: translateX(26px);
+	}
+
+	/* Rounded sliders */
+	.slider.round {
+	  border-radius: 34px;
+	}
+
+	.slider.round:before {
+	  border-radius: 50%;
+	}
+	.title {
+		position: relative;
+		top: 34%;
+		color: #1DA1F2;
+		font-size: 15px;
+	}
+	.header {
+	    position: absolute;
+    top: 13%;
+    left: 23%;
+	}
+      </style>
+	  <script src="jquery-3.3.1.js"></script>
+	  <script src="popup.js"></script>
+	  
+    </head>
+    <body>
+	<h1><img src="images/img32.png"><span class="header">Tweet Classifier<span></h1>
+	<div class="row">
+	<span class="title"> Hide racist tweets</span>
+      <label class="switch">
+	  <input type="checkbox" id="racistCheckbox">
+	  <span class="slider round"></span>
+	</label><br>
+	</div>
+	<div class="row">
+	<span class="title">Hide sexist tweets</span>
+	<label class="switch">
+	  <input type="checkbox" id="sexistCheckbox">
+	  <span class="slider round"></span>
+	</label>
+	</div>
+    </body>
+  </html>

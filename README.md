@@ -10,3 +10,4 @@ using the [Tweet classifer API](https://github.com/mohammad-akkad/tweet-classifi
 ## Authors
 
 * **Muhammed Akkad** - [linkedIn](https://www.linkedin.com/in/mohamad-akkad-5a923a149/)
+* **Dzeneta Hajdarpasic** - [linkedIn](https://www.linkedin.com/in/dzeneta-hajdarpasic-a2290a18a)
